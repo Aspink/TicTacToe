@@ -4,5 +4,7 @@ public class Main {
         System.out.println("1 X  O  X");
         System.out.println("2    O  X");
         System.out.println("3 X  O   ");
+        Board newBoard = new Board();
+
     }
 }
