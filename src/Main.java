@@ -5,6 +5,9 @@ public class Main {
         System.out.println("2    O  X");
         System.out.println("3 X  O   ");
         Board newBoard = new Board();
+        newBoard.boardTable[0][2] = "O";
+        newBoard.boardTable[1][0] = "X";
+        newBoard.boardPrinting();
 
     }
 }
