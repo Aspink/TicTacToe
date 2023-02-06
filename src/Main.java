@@ -11,6 +11,9 @@ public class Main {
         newBoard.boardTable[1][1] = "O";
         newBoard.boardTable[2][0] = "X";
         newBoard.boardPrinting();
+        newBoard.boardTable[0][0] = "O";
+        newBoard.boardTable[2][2] = "X";
+        newBoard.boardPrinting();
 
 
     }
