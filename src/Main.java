@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         Board newBoard = new Board();
+        Player player1 = new Player();
+        Player player2 = new Player();
 
         ClearScreen.cls();
         newBoard.boardTable[0][2] = "O";
