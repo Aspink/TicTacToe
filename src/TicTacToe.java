@@ -1,5 +1,11 @@
+import java.util.Scanner;
+
 public class TicTacToe {
+    static String[] name = new String[2];
+    static String[] callPlayerName = {"Podaj swoje imię, graczu 1:", "Podaj imię gracza 2. Jeśli chcesz grać ze mną, podaj moje imię - Computer."};
+
     public static void main(String[] args) {
+        inputNames(name, callPlayerName);
         Board newBoard = new Board();
         Player player1 = new Player();
         Player player2 = new Player();
@@ -19,5 +25,13 @@ public class TicTacToe {
         newBoard.boardPrinting();
 
 
+    }
+
+    public static void inputNames(String[] name, String[] callPlayerName) {
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i<2; i++) {
+            System.out.println(callPlayerName[i]);
+            name[i] = input.nextLine();
+        }
     }
 }
