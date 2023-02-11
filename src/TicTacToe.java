@@ -3,13 +3,16 @@ import java.util.Scanner;
 public class TicTacToe {
     static String[] name = new String[2];
     static String[] callPlayerName = {"Podaj swoje imię, graczu 1:", "Podaj imię gracza 2. Jeśli chcesz grać ze mną, podaj moje imię - Computer."};
+    Board newBoard = new Board();
+    public Player player1 = new Player();
+    Player player2 = new Player();
 
     public static void main(String[] args) {
         inputNames(name, callPlayerName);
-        Board newBoard = new Board();
-        Player player1 = new Player();
-        Player player2 = new Player();
 
+
+        player1.setName(name[0]);
+        player1.setSign(inputSign());
         ClearScreen.cls();
         newBoard.boardTable[0][2] = "O";
         newBoard.boardTable[1][0] = "X";
@@ -25,6 +28,11 @@ public class TicTacToe {
         newBoard.boardPrinting();
 
 
+    }
+
+    private static String inputSign() {
+        Scanner input = new Scanner(System.in);
+        System.out.println(player1.getName", czym grasz? Wybierz X, O lub L(losuj) ");
     }
 
     public static void inputNames(String[] name, String[] callPlayerName) {
