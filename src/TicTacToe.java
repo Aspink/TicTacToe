@@ -8,6 +8,7 @@ public class TicTacToe {
     Player player2 = new Player();
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         inputNames(name, callPlayerName);
 
 
@@ -31,12 +32,10 @@ public class TicTacToe {
     }
 
     private static String inputSign() {
-        Scanner input = new Scanner(System.in);
         System.out.println(player1.getName", czym grasz? Wybierz X, O lub L(losuj) ");
     }
 
     public static void inputNames(String[] name, String[] callPlayerName) {
-        Scanner input = new Scanner(System.in);
         for (int i = 0; i<2; i++) {
             System.out.println(callPlayerName[i]);
             name[i] = input.nextLine();
