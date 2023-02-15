@@ -4,29 +4,32 @@ public class TicTacToe {
     static String[] name = new String[2];
     static String[] callPlayerName = {"Podaj swoje imię, graczu 1:", "Podaj imię gracza 2. Jeśli chcesz grać ze mną, podaj moje imię - Computer."};
     Board newBoard = new Board();
-    public Player player1 = new Player();
+    public static Player player1 = new Player();
     Player player2 = new Player();
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        inputNames(name, callPlayerName);
+        InOutPut  userInterface = new InOutPut();
+        player1.setSign(userInterface.choiceSign());
 
-
-        player1.setName(name[0]);
-        player1.setSign(inputSign());
-        ClearScreen.cls();
-        newBoard.boardTable[0][2] = "O";
-        newBoard.boardTable[1][0] = "X";
-        newBoard.boardPrinting();
-        newBoard.boardTable[1][1] = "O";
-        newBoard.boardTable[2][0] = "X";
-        ClearScreen.cls();
-        newBoard.boardPrinting();
-        newBoard.boardTable[0][0] = "O";
-        newBoard.boardTable[2][2] = "X";
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-        newBoard.boardPrinting();
+//        Scanner input = new Scanner(System.in);
+//        inputNames(name, callPlayerName);
+//
+//
+//        player1.setName(name[0]);
+//        player1.setSign(inputSign());
+//        ClearScreen.cls();
+//        newBoard.boardTable[0][2] = "O";
+//        newBoard.boardTable[1][0] = "X";
+//        newBoard.boardPrinting();
+//        newBoard.boardTable[1][1] = "O";
+//        newBoard.boardTable[2][0] = "X";
+//        ClearScreen.cls();
+//        newBoard.boardPrinting();
+//        newBoard.boardTable[0][0] = "O";
+//        newBoard.boardTable[2][2] = "X";
+//        System.out.print("\033[H\033[2J");
+//        System.out.flush();
+//        newBoard.boardPrinting();
 
 
     }
