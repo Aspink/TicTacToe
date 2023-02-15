@@ -34,14 +34,14 @@ public class TicTacToe {
 
     }
 
-    private static String inputSign() {
-        System.out.println(player1.getName", czym grasz? Wybierz X, O lub L(losuj) ");
-    }
-
-    public static void inputNames(String[] name, String[] callPlayerName) {
-        for (int i = 0; i<2; i++) {
-            System.out.println(callPlayerName[i]);
-            name[i] = input.nextLine();
-        }
-    }
+//    private static String inputSign() {
+//        System.out.println(player1.getName() + ", czym grasz? Wybierz X, O lub L(losuj) ");
+//    }
+//
+//    public static void inputNames(String[] name, String[] callPlayerName) {
+//        for (int i = 0; i<2; i++) {
+//            System.out.println(callPlayerName[i]);
+//            name[i] = input.nextLine();
+//        }
+//    }
 }
