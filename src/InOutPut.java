@@ -8,8 +8,11 @@ public class InOutPut {
 
     public String choiceSign() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Wybierasz kółko (O), krzyżyk (X) czy losowanie (L)?");
-        String sign = input.nextLine();
+        String sign = " ";
+        while(!sign.equals("O") && !sign.equals("X") && !sign.equals("L")) {
+            System.out.println("Wybierasz kółko (O), krzyżyk (X) czy losowanie (L)?");
+            sign = input.nextLine().toUpperCase();
+        }
         return sign;
     }
 }
