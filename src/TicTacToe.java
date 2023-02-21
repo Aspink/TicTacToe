@@ -8,6 +8,9 @@ public class TicTacToe {
     Player player2 = new Player();
 
     public static void main(String[] args) {
-        InOutPut  userInterface = new InOutPut();
+        InOutPut userInterface = new InOutPut();
         player1.setSign(userInterface.choiceSign());
+        System.out.println(player1.getSign());
+    }
+}
 
