@@ -21,7 +21,7 @@ public class InOutPut {
                 sign = "O";
             }
         }
-        System.out.println("Twój znak to " + sign);
+        System.out.println("\033[1;33mTwój znak to " + sign + "\u001B[0m");
         return sign;
     }
 }
