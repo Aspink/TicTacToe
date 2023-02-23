@@ -24,4 +24,13 @@ public class InOutPut {
         System.out.println("\033[1;33mTwój znak to " + sign + "\u001B[0m");
         return sign;
     }
+    public String whatsYourName() {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+        String name;
+        System.out.println("Podaj swoje imię.");
+        name = input.nextLine();
+        System.out.println("\033[1;33mWitaj, " + name + "!\u001B[0m");
+        return name;
+    }
 }
