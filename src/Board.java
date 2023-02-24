@@ -1,5 +1,5 @@
 public class Board {
-    String[][] boardTable = { {" ", " ", " "},
+    private String[][] boardTable = { {" ", " ", " "},
                             {" ", " ", " "},
                             {" ", " ", " "}};
 
@@ -13,5 +13,24 @@ public class Board {
             System.out.println();
         }
     }
-
+    public boolean checkColumn(int column) {
+        boolean free = false;
+        for(int i = 0; i < 3; i++) {
+            if (boardTable[column][i].equals(" ")) {
+                free = true;
+                break;
+            }
+        }
+        return free;
+    }
+    public boolean checkRow(int column, int row) {
+        boolean free = false;
+        if (boardTable[column][row].equals(" ")) {
+            free = true;
+        }
+        return free;
+    }
+    public void putSign(String sign, int column, int row) {
+        boardTable[row][column] = sign;
+    }
 }

@@ -1,10 +1,12 @@
 public class Player {
     private String name;
 
-    private String sign;
-    private String color;
+    public String sign;
+    public String color;
+    public Board board;
 
-    public Player() {
+    public Player(Board board) {
+        this.board = board;
 
     }
 
