@@ -1,4 +1,13 @@
 public class Player {
+    private String name;
+
+    private String sign;
+    private String color;
+
+    public Player() {
+
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -7,11 +16,8 @@ public class Player {
         this.sign = sign;
     }
 
-    private String name;
-    private String sign;
-
-    public Player() {
-
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getName() {
@@ -20,5 +26,13 @@ public class Player {
 
     public String getSign() {
         return sign;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void yourTurn() {
+        System.out.println(color + name + ", twój ruch!" + InOutPut.RESET);
     }
 }
