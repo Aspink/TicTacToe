@@ -51,4 +51,13 @@ public class InOutPut {
         }
         return enemy;
     }
+    public static int choiceColumn() {
+        Scanner input = new Scanner(System.in);
+        int column = 0;
+        System.out.print("Wybierz kolumnę (od 1 do 3): " + RESET);
+        column = input.nextInt();
+//        System.out.println(color + "Witaj, " + name + "!" + RESET);
+        return column;
+    }
+
 }
