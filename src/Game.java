@@ -3,6 +3,9 @@ public class Game {
     public Player player1 = new Player(board);
     public Player player2;
     public Player currentPlayer;
+    public Player winner;
+    private boolean win = false;
+    private int turn = 0;
     InOutPut userInterface = new InOutPut();
 //    public void Game() {}
     public void start() {
@@ -31,8 +34,23 @@ public class Game {
             player2.setSign("X");
         }
         System.out.println(player2.getName() + " ma znak " + player2.getSign() + "\n");
-        currentPlayer.yourTurn();
-        board.boardPrinting();
+
+        while(turn < 9 && win == false) {
+            currentPlayer.yourTurn();
+            if(turn >= 4) {
+                win = board.isWinner(currentPlayer.getSign());
+            }
+            board.boardPrinting();
+            if(win) {
+                currentPlayer.youWin();
+            }
+            currentPlayer = swichPlayer();
+            turn++;
+        }
+        if(!win) {
+            System.out.println("Plansza pełna, jest remis!");
+        }
+
     }
 
 
