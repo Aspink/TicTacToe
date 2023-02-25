@@ -35,6 +35,19 @@ public class Player {
     }
 
     public void yourTurn() {
-        System.out.println(color + name + ", twój ruch!" + InOutPut.RESET);
+        System.out.println(color + name + ", twój ruch!");
+        int column = 0, row = 0;
+        boolean free = false;
+        while(free == false) {
+            column = InOutPut.choiceColumn()-1;
+            free = board.checkColumn(column);
+        }
+//        System.out.println("Kolumna: " + (column + 1));
+        while(free == false) {
+            row = InOutPut.choiceRow()-1;
+            free = board.checkRow(column, row);
+        }
+//        System.out.println("Wiersz: " + (row + 1) + "\n" + InOutPut.RESET);
+        board.putSign(sign, column, row);
     }
 }
