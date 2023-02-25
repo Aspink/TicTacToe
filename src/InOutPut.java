@@ -54,10 +54,17 @@ public class InOutPut {
     public static int choiceColumn() {
         Scanner input = new Scanner(System.in);
         int column = 0;
-        System.out.print("Wybierz kolumnę (od 1 do 3): " + RESET);
+        System.out.print("Wybierz kolumnę (od 1 do 3): ");
         column = input.nextInt();
 //        System.out.println(color + "Witaj, " + name + "!" + RESET);
         return column;
     }
-
+    public static int choiceRow() {
+        Scanner input = new Scanner(System.in);
+        int row = 0;
+        System.out.print("Wybierz wiersz (od 1 do 3): ");
+        row = input.nextInt();
+//        System.out.println(color + "Witaj, " + name + "!" + RESET);
+        return row;
+    }
 }
