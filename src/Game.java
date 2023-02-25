@@ -44,7 +44,7 @@ public class Game {
             if(win) {
                 currentPlayer.youWin();
             }
-            currentPlayer = swichPlayer();
+            currentPlayer = switchPlayer();
             turn++;
         }
         if(!win) {
@@ -53,5 +53,12 @@ public class Game {
 
     }
 
-
+    public Player switchPlayer() {
+        if(currentPlayer == player1) {
+            currentPlayer = player2;
+        } else {
+            currentPlayer = player1;
+        }
+        return currentPlayer;
+    }
 }
