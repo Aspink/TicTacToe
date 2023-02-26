@@ -50,4 +50,8 @@ public class Player {
 //        System.out.println("Wiersz: " + (row + 1) + "\n" + InOutPut.RESET);
         board.putSign(sign, column, row);
     }
+
+    public void youWin() {
+        System.out.println(color + name + ", wygrałeś, gratulacje!" + InOutPut.RESET);
+    }
 }
