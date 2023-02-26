@@ -23,4 +23,8 @@ public class ComputerPlayer extends Player{
         System.out.println("Wiersz: " + (row + 1) + "\n" + InOutPut.RESET);
         board.putSign(sign, column, row);
     }
+    @Override
+    public void youWin() {
+        System.out.println(color + "Wygrałem! Wygrałem! A Ty przegrałeś, ha ha ha!" + InOutPut.RESET);
+    }
 }
