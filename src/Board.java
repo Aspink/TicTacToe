@@ -33,4 +33,15 @@ public class Board {
     public void putSign(String sign, int column, int row) {
         boardTable[row][column] = sign;
     }
+
+    public boolean isWinner(String sign) {
+        boolean victory = false;
+        if(boardTable[1][1].equals(sign)) {
+            if(boardTable[0][0].equals(sign) && boardTable[2][2].equals(sign)) {
+
+            }
+        }
+
+        return victory;
+    }
 }
