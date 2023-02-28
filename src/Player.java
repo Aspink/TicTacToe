@@ -43,6 +43,7 @@ public class Player {
             free = board.checkColumn(column);
         }
 //        System.out.println("Kolumna: " + (column + 1));
+        free = false;
         while(free == false) {
             row = InOutPut.choiceRow()-1;
             free = board.checkRow(column, row);
