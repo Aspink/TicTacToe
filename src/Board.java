@@ -25,7 +25,7 @@ public class Board {
     public boolean checkColumn(int column) {
         boolean free = false;
         for(int i = 0; i < 3; i++) {
-            if (boardTable[column][i].equals(" ")) {
+            if (boardTable[i][column].equals(" ")) {
                 free = true;
                 break;
             }
@@ -34,7 +34,7 @@ public class Board {
     }
     public boolean checkRow(int column, int row) {
         boolean free = false;
-        if (boardTable[column][row].equals(" ")) {
+        if (boardTable[row][column].equals(" ")) {
             free = true;
         }
         return free;
