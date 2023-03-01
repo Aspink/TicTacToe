@@ -29,7 +29,7 @@ public class InOutPut {
                 sign = "O";
             }
         }
-        System.out.println(YELLOW + "Twój znak to " + sign + RESET);
+        System.out.println(YELLOW + "Twój znak to " + sign + "."+ RESET);
         return sign;
     }
     public static String whatsYourName(String color) {
