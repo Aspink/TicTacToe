@@ -41,18 +41,27 @@ public class Player {
         while(free == false) {
             column = InOutPut.choiceColumn()-1;
             free = board.checkColumn(column);
+            if(free == false) {
+                System.out.print("To zła kolumna była! ");
+            }
         }
 //        System.out.println("Kolumna: " + (column + 1));
         free = false;
         while(free == false) {
             row = InOutPut.choiceRow()-1;
             free = board.checkRow(column, row);
+            if(free == false) {
+                System.out.print("To miejsce jest już zajęte! ");
+            }
         }
-//        System.out.println("Wiersz: " + (row + 1) + "\n" + InOutPut.RESET);
+        System.out.print(InOutPut.RESET);
         board.putSign(sign, column, row);
     }
 
     public void youWin() {
         System.out.println(color + name + ", wygrałeś, gratulacje!" + InOutPut.RESET);
+    }
+    public String getSignMessage() {
+        return color + "Twój znak to " + sign + "." + InOutPut.RESET;
     }
 }
