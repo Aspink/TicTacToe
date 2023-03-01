@@ -7,7 +7,7 @@ public class ComputerPlayer extends Player{
 
     @Override
     public void yourTurn() {
-        System.out.println(color + "Teraz mój ruch!\n");
+        System.out.println(color + "Teraz mój ruch!");
         Random random = new Random();
         int column = 0, row = 0;
         boolean free = false;
@@ -21,11 +21,14 @@ public class ComputerPlayer extends Player{
             row = random.nextInt(3);
             free = board.checkRow(column, row);
         }
-        System.out.println("Wiersz: " + (row + 1) + "\n" + InOutPut.RESET);
+        System.out.println("Wiersz: " + (row + 1) + InOutPut.RESET);
         board.putSign(sign, column, row);
     }
     @Override
     public void youWin() {
         System.out.println(color + "Wygrałem! Wygrałem! A Ty przegrałeś, ha ha ha!" + InOutPut.RESET);
+    }
+    public String getSignMessage() {
+        return color + "Mój znak to " + sign + "." + InOutPut.RESET;
     }
 }
