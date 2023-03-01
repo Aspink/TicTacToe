@@ -13,7 +13,7 @@ public class Board {
         {{0,2},{1,2},{2,2}},
     };
     public void boardPrinting() {
-        System.out.println("  1  2  3 ");
+        System.out.println("\n  1  2  3 ");
         for(int i = 0; i < 3; i++) {
             System.out.print(i + 1);
             for(int j = 0; j < 3; j++) {
@@ -21,6 +21,7 @@ public class Board {
             }
             System.out.println();
         }
+        System.out.println();
     }
     public boolean checkColumn(int column) {
         boolean free = false;
