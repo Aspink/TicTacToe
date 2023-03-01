@@ -33,7 +33,8 @@ public class Game {
             currentPlayer = player2;
             player2.setSign("X");
         }
-        System.out.println(player2.getName() + " ma znak " + player2.getSign() + "\n");
+        System.out.println(player2.getSignMessage());
+        board.boardPrinting();
 
         while(turn < 9 && win == false) {
             currentPlayer.yourTurn();
