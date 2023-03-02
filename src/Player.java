@@ -37,7 +37,6 @@ public class Player {
                 System.out.print("To zła kolumna była! Podaj prawidłową. ");
             }
         }
-//        System.out.println("Kolumna: " + (column + 1));
         free = false;
         while(!free) {
             row = InOutPut.choiceRow()-1;
