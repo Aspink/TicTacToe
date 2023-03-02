@@ -62,4 +62,16 @@ public class InOutPut {
         row = input.nextInt();
         return row;
     }
+    public static void playAgain() {
+        Scanner input = new Scanner(System.in);
+        String wannaPlay;
+        System.out.print(YELLOW + "Chcesz zagrać ponownie? Wpisz T (tak) lub cokolwiek innego, żeby zakończyć. " + RESET);
+        wannaPlay = input.nextLine().toUpperCase();
+        if(wannaPlay.equals("T")) {
+            Game game = new Game();
+            game.start();
+        } else {
+            System.out.println(GREEN + "\nDziękuję za grę i do następnego razu!");
+        }
+    }
 }
