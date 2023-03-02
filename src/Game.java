@@ -1,16 +1,14 @@
 public class Game {
     public Board board = new Board();
-    public Player player1 = new Player(board);
+    private final Player player1 = new Player(board);
     public Player player2;
     public Player currentPlayer;
-    public Player winner;
     private boolean win = false;
     private int turn = 0;
     InOutPut userInterface = new InOutPut();
-//    public void Game() {}
     public void start() {
         player1.setColor(InOutPut.YELLOW);
-        player1.setName(userInterface.whatsYourName(InOutPut.YELLOW));
+        player1.setName(InOutPut.whatsYourName(InOutPut.YELLOW));
         player1.setSign(userInterface.choiceSign());
         String opponent = userInterface.choiceOpponent();
         switch(opponent){
@@ -26,17 +24,17 @@ public class Game {
                 player2.setName(InOutPut.whatsYourName(InOutPut.CYAN));
                 break;
         }
-        if(player1.getSign().equals("X")) {
+        if(player1.getSign().equals("⛌")) {
             currentPlayer = player1;
-            player2.setSign("O");
+            player2.setSign("〇");
         } else {
             currentPlayer = player2;
-            player2.setSign("X");
+            player2.setSign("⛌");
         }
         System.out.println(player2.getSignMessage());
         board.boardPrinting();
 
-        while(turn < 9 && win == false) {
+        while(turn < 9 && !win) {
             currentPlayer.yourTurn();
             if(turn >= 4) {
                 win = board.isWinner(currentPlayer.getSign());
@@ -49,7 +47,7 @@ public class Game {
             turn++;
         }
         if(!win) {
-            System.out.println("Plansza pełna, jest remis!");
+            System.out.println(InOutPut.GREEN + "Plansza pełna, jest remis!" + InOutPut.RESET);
         }
 
     }
