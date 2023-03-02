@@ -11,13 +11,13 @@ public class ComputerPlayer extends Player{
         Random random = new Random();
         int column = 0, row = 0;
         boolean free = false;
-        while(free == false) {
+        while(!free) {
             column = random.nextInt(3);
             free = board.checkColumn(column);
         }
         System.out.println("Kolumna: " + (column + 1));
         free = false;
-        while(free == false) {
+        while(!free) {
             row = random.nextInt(3);
             free = board.checkRow(column, row);
         }
@@ -28,6 +28,7 @@ public class ComputerPlayer extends Player{
     public void youWin() {
         System.out.println(color + "Wygrałem! Wygrałem! A Ty przegrałeś, ha ha ha!" + InOutPut.RESET);
     }
+    @Override
     public String getSignMessage() {
         return color + "Mój znak to " + sign + "." + InOutPut.RESET;
     }
