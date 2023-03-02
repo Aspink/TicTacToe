@@ -49,7 +49,7 @@ public class Game {
         if(!win) {
             System.out.println(InOutPut.GREEN + "Plansza pełna, jest remis!" + InOutPut.RESET);
         }
-
+        InOutPut.playAgain();
     }
 
     public Player switchPlayer() {
