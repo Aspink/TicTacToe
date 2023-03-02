@@ -1,8 +1,8 @@
 public class Board {
-    private String[][] boardTable = { {" ", " ", " "},
+    private final String[][] boardTable = { {" ", " ", " "},
                             {" ", " ", " "},
                             {" ", " ", " "}};
-    private final int winningSets[][][] = {
+    private final int[][][] winningSets = {
         {{0,0},{1,1},{2,2}},
         {{0,2},{1,1},{2,0}},
         {{1,0},{1,1},{1,2}},
@@ -13,11 +13,11 @@ public class Board {
         {{0,2},{1,2},{2,2}},
     };
     public void boardPrinting() {
-        System.out.println("\n  1  2  3 ");
+        System.out.println("\n\t1\t2\t3 ");
         for(int i = 0; i < 3; i++) {
             System.out.print(i + 1);
             for(int j = 0; j < 3; j++) {
-                System.out.print(" " + boardTable[i][j] + " ");
+                System.out.print("\t" + boardTable[i][j]);
             }
             System.out.println();
         }
@@ -25,6 +25,9 @@ public class Board {
     }
     public boolean checkColumn(int column) {
         boolean free = false;
+        if(column < 0 || column > 2) {
+            return false;
+        }
         for(int i = 0; i < 3; i++) {
             if (boardTable[i][column].equals(" ")) {
                 free = true;
@@ -34,11 +37,10 @@ public class Board {
         return free;
     }
     public boolean checkRow(int column, int row) {
-        boolean free = false;
-        if (boardTable[row][column].equals(" ")) {
-            free = true;
+        if(row < 0 || row > 2) {
+            return false;
         }
-        return free;
+        return boardTable[row][column].equals(" ");
     }
     public void putSign(String sign, int column, int row) {
         boardTable[row][column] = sign;
