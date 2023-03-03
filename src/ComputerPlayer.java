@@ -26,7 +26,7 @@ public class ComputerPlayer extends Player{
     }
     @Override
     public void youWin() {
-        System.out.println(color + "Wygrałem! Wygrałem! A Ty przegrałeś, ha ha ha!" + InOutPut.RESET);
+        System.out.println(color + "Wygrałem! Wygrałem! \uD83D\uDE0E A Ty przegrałeś, ha ha ha!" + InOutPut.RESET);
     }
     @Override
     public String getSignMessage() {
