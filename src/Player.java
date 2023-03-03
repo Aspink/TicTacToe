@@ -50,7 +50,7 @@ public class Player {
     }
 
     public void youWin() {
-        System.out.println(color + name + ", wygrywasz, gratulacje!" + InOutPut.RESET);
+        System.out.println(color + name + ", wygrywasz \uD83D\uDE42, gratulacje!" + InOutPut.RESET);
     }
     public String getSignMessage() {
         return color + "Twój znak to " + sign + "." + InOutPut.RESET;
