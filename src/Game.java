@@ -1,11 +1,11 @@
 public class Game {
-    public Board board = new Board();
+    private final Board board = new Board();
     private final Player player1 = new Player(board);
-    public Player player2;
-    public Player currentPlayer;
+    private Player player2;
+    private Player currentPlayer;
     private boolean win = false;
     private int turn = 0;
-    InOutPut userInterface = new InOutPut();
+    private final InOutPut userInterface = new InOutPut();
     public void start() {
         player1.setColor(InOutPut.YELLOW);
         player1.setName(InOutPut.whatsYourName(InOutPut.YELLOW));
